@@ -16,9 +16,9 @@ This paper is under review at Water Resources Research.
 
 Examples of the hierarchical Bayesian framework:
 
-- Case1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
+- Case 1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
 
-- Case2, non-linear forward modeling, pumping test: case2_LocalInversion_pumpingtest.ipynb
+- Case 2, non-linear forward modeling, pumping test: case2_LocalInversion_pumpingtest.ipynb
 
 
 
