@@ -16,12 +16,12 @@ This paper is under review at Water Resources Research.
 
 Examples of the hierarchical Bayesian framework:
 
-- Case 1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
+- Case 1, linear forward modeling, volume averaging: *case1_HierarchicalBayesian_volumeAveraging.ipynb*
 
-- Case 2, non-linear forward modeling, pumping test: case2_LocalInversion_pumpingtest.ipynb
-
-
+- Case 2, non-linear forward modeling, pumping test: *case2_LocalInversion_pumpingtest.ipynb*
 
 
-Example datasets are too large to be hosted on GitHub. You can download our example datasets from this [Google Drive link](https://drive.google.com/drive/folders/15DhGUQN6phI0hMmR3mL_c1OL7db5pmd7?usp=sharing). Or you can generate datasets using MC_case1_linear_forward_volume_averaging.py or MC_case2_nonlinear_forward_pumpingtest.py in /utils. 
+
+
+Example datasets are too large to be hosted on GitHub. You can download our example datasets from this [Google Drive link](https://drive.google.com/drive/folders/15DhGUQN6phI0hMmR3mL_c1OL7db5pmd7?usp=sharing). Or you can generate datasets using *MC_case1_linear_forward_volume_averaging.py* or *MC_case2_nonlinear_forward_pumpingtest.py* in */utils*. 
 
