@@ -1,10 +1,16 @@
 # Hierarchical Bayesian inversion of global variables and large-scale spatial fields ([preprint link](https://www.essoar.org/doi/10.1002/essoar.10508754.1))
 
-Author: Lijing Wang, Peter Kitanidis, Jef Caers
+An open-source Python package on the hierarchical Bayesian framework.
+
+
+
+**Author**: Lijing Wang, Peter Kitanidis, Jef Caers
 
 This paper is under review at Water Resources Research. 
 
-This repo contains an open-source Python package on the hierarchical Bayesian framework including two case studies.
+Case1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
+
+Case2, non-linear forward modeling, pumping test: case2_LocalInversion_pumpingtest.ipynb
 
 
 --------- 
