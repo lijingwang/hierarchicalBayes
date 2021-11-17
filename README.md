@@ -4,12 +4,16 @@ An open-source Python package on the hierarchical Bayesian framework.
 
 
 
-**Author**: Lijing Wang^1, Peter Kitanidis^2, Jef Caers^1
+**Author**: Lijing Wang<sup>1<sup>, Peter Kitanidis<sup>2<sup>, Jef Caers<sup>1<sup>
 
-^1 Department of Geological Sciences, Stanford University
-^2 Department of Civil and Environmental Engineering, Stanford University
+<sup>1 Department of Geological Sciences, Stanford University
+<sup>2 Department of Civil and Environmental Engineering, Stanford University
+
+
 
 This paper is under review at Water Resources Research. 
+
+Examples of hierarchical Bayesian framework:
 
 - Case1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
 
