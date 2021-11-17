@@ -1,4 +1,4 @@
-# Hierarchical Bayesian inversion of global variables and large-scale spatial fields [Preprint link](https://www.essoar.org/doi/10.1002/essoar.10508754.1)
+# Hierarchical Bayesian inversion of global variables and large-scale spatial fields ([preprint link](https://www.essoar.org/doi/10.1002/essoar.10508754.1))
 
 Author: Lijing Wang, Peter Kitanidis, Jef Caers
 
