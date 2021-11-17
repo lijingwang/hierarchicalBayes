@@ -4,7 +4,10 @@ An open-source Python package on the hierarchical Bayesian framework.
 
 
 
-**Author**: Lijing Wang, Peter Kitanidis, Jef Caers
+**Author**: Lijing Wang^1, Peter Kitanidis^2, Jef Caers^1
+
+^1 Department of Geological Sciences, Stanford University
+^2 Department of Civil and Environmental Engineering, Stanford University
 
 This paper is under review at Water Resources Research. 
 
