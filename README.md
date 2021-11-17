@@ -8,9 +8,9 @@ An open-source Python package on the hierarchical Bayesian framework.
 
 This paper is under review at Water Resources Research. 
 
-Case1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
+- Case1, linear forward modeling, volume averaging: case1_HierarchicalBayesian_volumeAveraging.ipynb
 
-Case2, non-linear forward modeling, pumping test: case2_LocalInversion_pumpingtest.ipynb
+- Case2, non-linear forward modeling, pumping test: case2_LocalInversion_pumpingtest.ipynb
 
 
 --------- 
