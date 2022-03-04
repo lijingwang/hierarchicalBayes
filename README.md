@@ -22,7 +22,7 @@ This paper is under review at Water Resources Research. [Preprint link](https://
 
 - Case 3, non-linear forward modeling, 3D floodplain system: [case3.ipynb](https://github.com/lijingwang/hierarchicalBayes/blob/master/case3.ipynb)
 
-Example datasets are too large to be hosted on GitHub. You can download our example datasets from this Google Drive link. 
+Example datasets are too large to be hosted on GitHub. You can download our example datasets from [this Google Drive link](https://drive.google.com/file/d/1R6IuzakKgBFhvhw2_DI0htnMV3EhBbcM/view?usp=sharing). 
 Or you can generate datasets using MC_case*.py in /utils.
 
 ### Methods in /inversion_methods
