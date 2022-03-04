@@ -1,7 +1,3 @@
-# hierarchicalBayes
-Open-source Python package for Hierarchical Bayesian inversion of global variables and large-scale spatial fields. 
-
-
 ## Hierarchical Bayesian inversion of global variables and large-scale spatial fields (preprint link)
 An open-source Python package on the hierarchical Bayesian framework.
 
