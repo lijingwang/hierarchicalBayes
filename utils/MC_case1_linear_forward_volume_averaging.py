@@ -3,8 +3,8 @@
 import numpy as np
 import pandas as pd
 import gstools as gs
-from tqdm import tqdm
 import os
+from tqdm import tqdm
 
 def generate_m(theta, seed = None):
     model = gs.Gaussian(dim=2, 
@@ -28,6 +28,7 @@ def generate_m_MC(theta_prior):
 if __name__ == '__main__':
     path = os.path.dirname(os.getcwd()) 
     subpath = '/examples/case1_linear_forward_volume_averaging/'
+    subpath = '/examples/'
 
     # domain size
     num_x = 70
@@ -42,7 +43,7 @@ if __name__ == '__main__':
 
     ## prior Monte Carlo sampling: theta
     np.random.seed(2021)
-    num_sample = 5000
+    num_sample = 5
     prior_min = np.array([28,9,15,5,0]) #np.array([28,9,15,5,0])
     prior_max = np.array([32,16,30,15,180]) #np.array([32,16,30,15,180])
     theta_prior = np.vstack((np.random.uniform(prior_min[0],prior_max[0],num_sample),

@@ -38,7 +38,7 @@ def McMC(G, d_obs):
     basic_model = pm.Model()
 
     with basic_model:
-        # Priors for unknown model parameters
+        # Priors for unknown model parameters, case 1
         mean = pm.Uniform("mean", lower = 28, upper=32)
         variance = pm.Uniform("variance", lower = 9, upper=16)
         max_range = pm.Uniform("max_range", lower = 15, upper=30)

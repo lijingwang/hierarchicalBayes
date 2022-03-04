@@ -8,6 +8,7 @@ import sys
 import os
 path = os.getcwd()+'/utils'
 sys.path.append(path)
+print(path)
 
 from KMedoids import KMedoids
 import pandas as pd

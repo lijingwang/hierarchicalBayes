@@ -11,7 +11,7 @@ import gstools as gs
 def ensemble_smoother(m,d,d_obs):
     # no measurement error for now
     # covaraince matrix of d: cov_d
-    cov_d = np.cov(d)
+    cov_d = np.cov(d).reshape(d.shape[0],d.shape[0])
     # cross-covariance matrix: cov_m_d, m can be very large so I split into small piece and calculate the covariance matrix.
     start = 0
     sep = 1000

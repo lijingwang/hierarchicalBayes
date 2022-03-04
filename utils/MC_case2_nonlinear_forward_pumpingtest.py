@@ -34,12 +34,6 @@ observed_wells = [[41,41],[57,57],[41,57],[57,41]]
 def run_modflow(fname, nrow, ncol, hwest, loghk, pumping_rate, well_location, observed_wells, path = modflowpath):
     modelname = fname
     mf = flopy.modflow.Modflow(modelname, exe_name=path)
-    
-    # Define the model grid
-    # A horizontal confined aquifer (1000 x 1000 x 50 m) with constant
-    # head on the western and eastern boundaries (hwest = hwest m, heast = 0
-    # m), no flow condition on northern and southern boundaries.
-    # Horizontal and vertical hydraulic conductivity are given by 10 m/d.
 
     Lx = 1000.
     Ly = 1000.
@@ -161,7 +155,7 @@ if __name__ == '__main__':
     
     ## prior Monte Carlo sampling: theta
     np.random.seed(0)
-    num_sample = 5000
+    num_sample = 2
     
     # mean, variance, max_range, min_range, anisotropy, head_west
     prior_min = np.array([-3,0.1,15,5,0, 8])

@@ -49,24 +49,36 @@ def custom_loss_function_case2(y_true,y_pred):
     
     return (loss1+loss2+loss3)/num_theta
 
+def custom_loss_function_case3(y_true,y_pred):
+    num_theta = 13
+    # mean squared error except anisotropy, anisotropy is the last global variable
+    loss1 = K.sum(K.square(y_pred[:,:-2] - y_true[:,:-2]), axis=-1)
+    
+    # mean squared error for anisotropy (note here we rescale all global variables in between of -1 and 1. Suitable for activation tanh)
+    # (you can also rescale them between 0 and 1. Suitable for activation sigmoid)
+    
+    diff_angle = K.abs(y_true[:,-2:]-y_pred[:,-2:])
+    loss2 = K.sum((K.square(K.abs(tf.math.minimum(2 - diff_angle,diff_angle)))), axis=-1)
+
+    return (loss1+loss2)/num_theta
+
+
 # Construct neural network model for ML dimension reduction
-def model_tanh(num_input, num_output, custom_loss_function, learning_rate = 2.5e-3):
+def model_tanh(num_input, num_output, custom_loss_function, l1_reg = 1e-4, l2_reg = 1e-3,learning_rate = 2.5e-3,activation = 'relu'):
     model = keras.Sequential()
-    l1_reg = 1e-4
-    l2_reg = 1e-3
     
     model.add(keras.layers.Dense(num_input, kernel_regularizer=regularizers.l1_l2(l1=l1_reg, l2=l2_reg),
                                  bias_regularizer=regularizers.l2(l2_reg), 
-                                 activity_regularizer=regularizers.l2(l2_reg), activation='relu'))
+                                 activity_regularizer=regularizers.l2(l2_reg), activation=activation))
     model.add(keras.layers.Dense(num_input, kernel_regularizer=regularizers.l1_l2(l1=l1_reg, l2=l2_reg),
                                  bias_regularizer=regularizers.l2(l2_reg), 
-                                 activity_regularizer=regularizers.l2(l2_reg), activation='relu'))
+                                 activity_regularizer=regularizers.l2(l2_reg), activation=activation))
     model.add(keras.layers.Dense(num_input, kernel_regularizer=regularizers.l1_l2(l1=l1_reg, l2=l2_reg),
                                  bias_regularizer=regularizers.l2(l2_reg), 
-                                 activity_regularizer=regularizers.l2(l2_reg), activation='relu'))
+                                 activity_regularizer=regularizers.l2(l2_reg), activation=activation))
     model.add(keras.layers.Dense(num_input, kernel_regularizer=regularizers.l1_l2(l1=l1_reg, l2=l2_reg),
                                  bias_regularizer=regularizers.l2(l2_reg), 
-                                 activity_regularizer=regularizers.l2(l2_reg), activation='relu'))
+                                 activity_regularizer=regularizers.l2(l2_reg), activation=activation))
 
     model.add(keras.layers.Dense(num_output,activation = 'tanh'))
     
@@ -85,7 +97,7 @@ def model_tanh(num_input, num_output, custom_loss_function, learning_rate = 2.5e
     return model
 
 # ML-assisted dimension reduction
-def ML_dimension_reduction(d, d_obs, theta, prior_min_theta, prior_max_theta, custom_loss_function, learning_rate = 2.5e-3, num_input = None, num_epoch = 2000, batch_size = 125):
+def ML_dimension_reduction(d, d_obs, theta, prior_min_theta, prior_max_theta, custom_loss_function, l1_reg = 1e-4, l2_reg = 1e-3,learning_rate = 2.5e-3, num_input = None, num_epoch = 2000, batch_size = 125):
     # d: number of sample x number of features
     # theta: number of sample x number of features
     num_d = d.shape[1]
@@ -104,7 +116,7 @@ def ML_dimension_reduction(d, d_obs, theta, prior_min_theta, prior_max_theta, cu
     # construct nn model: S()
     if num_input is None: 
         num_input = num_d
-    S = model_tanh(num_input, num_theta, custom_loss_function, learning_rate = learning_rate)
+    S = model_tanh(num_input, num_theta, custom_loss_function,l1_reg = l1_reg, l2_reg = l2_reg, learning_rate = learning_rate)
     
     # train model: S()
     history = S.fit(X_train, y_train, epochs=num_epoch, batch_size=batch_size, validation_data=(X_test, y_test), 
