@@ -26,3 +26,6 @@ Example datasets are too large to be hosted on GitHub. You can download our exam
 Or you can generate datasets using MC_case*.py in /utils.
 
 ### Methods in /inversion_methods
+- Nonlinear global variables inversion using ML-based method: nonlinear_inverse_theta_jointML.py
+- Nonlinear spatial variables inversion using ES-MDA: nonlinear_inverse_m_ES.py
+- Local PCA: local_inversion_localPCA.py
