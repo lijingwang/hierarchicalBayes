@@ -14,7 +14,7 @@ Author: Lijing Wang<sup>1</sup>, Peter Kitanidis<sup>2</sup>, Jef Caers<sup>1</s
 
 This paper is under review at Water Resources Research.
 
-### Case study of this hierarchical Bayesian framework:
+### Case study of this hierarchical Bayesian framework
 
 - Case 1, linear forward modeling, volume averaging: case1.ipynb
 
