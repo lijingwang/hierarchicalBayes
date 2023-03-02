@@ -12,7 +12,7 @@ Author: Lijing Wang<sup>1</sup>, Peter Kitanidis<sup>2</sup>, Jef Caers<sup>1</s
 
 <sup>2</sup> Department of Civil and Environmental Engineering, Stanford University
 
-This paper is under review at Water Resources Research. [Preprint link](https://www.essoar.org/doi/abs/10.1002/essoar.10508754.1)
+This paper was published at Water Resources Research: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031610 
 
 ### Case study of this hierarchical Bayesian framework
 
